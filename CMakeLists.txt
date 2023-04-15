@@ -9,7 +9,7 @@ set(LINK_LIBRARIES
 )
 
 link_directories(
-  $ENV{SDKTARGETSYSROOT}/usr/lib
+  /usr/lib
 )
 
 set(COMPILE_OPTIONS
@@ -17,10 +17,8 @@ set(COMPILE_OPTIONS
   -Wall
   -fexceptions
   -DGIT_HASH=\"${COMMIT_HASH}\"
-#   -DAA_ENABLE
 )
 
-## リンクオプションの指定（共通）
 set(LINK_OPTIONS
     $ENV{CMAKE_EXE_LINKER_FLAGS}
     -Wl,-Bdynamic
@@ -29,12 +27,10 @@ set(LINK_OPTIONS
 )
 
 set(INCLUDE_PATH
-    ## 本ソース
     ${CMAKE_SOURCE_DIR}/
 )
 
 #######################################################################################
-# Set Macro For Add Test Executable.
 macro(add_custom_exe TARGET_NAME)
     # message(${ARGV})
     message("+------------------------------------------------------------+")
