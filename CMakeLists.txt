@@ -32,11 +32,10 @@ set(INCLUDE_PATH
 
 #######################################################################################
 macro(add_custom_exe TARGET_NAME)
-    # message(${ARGV})
     message("+------------------------------------------------------------+")
     message("| --> Add executable: <<< ${TARGET_NAME} >>>")
-
     # message("+------------------------------------------------------------+")
+    # message(${ARGV})
     add_executable(${TARGET_NAME}
         ${ARGV}
     )
