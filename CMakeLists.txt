@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(project_name select_study)
+set(project_name ipc_study)
 
 project(${project_name})
 
