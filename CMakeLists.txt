@@ -21,9 +21,6 @@ set(COMPILE_OPTIONS
 
 set(LINK_OPTIONS
     $ENV{CMAKE_EXE_LINKER_FLAGS}
-    -Wl,-Bdynamic
-    -Wl,-z,relro,-z,lazy
-    -Wl,-Map,${exe_name}.map
 )
 
 set(INCLUDE_PATH
