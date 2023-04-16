@@ -51,8 +51,6 @@ macro(add_custom_exe TARGET_NAME)
         -g
         -Wno-variadic-macros
         -Wno-unused-parameter
-        -DUNIT_TEST
-        -DPRIVATE_FUNC_TEST
         -Wno-error
     )
     target_compile_features(${TARGET_NAME} PRIVATE
