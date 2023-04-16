@@ -88,3 +88,7 @@ add_custom_exe(select_with_fd_server
 add_custom_exe(select_with_fd_client
     ${CMAKE_SOURCE_DIR}/select_with_fd_client.c
 )
+
+add_custom_exe(watcher
+    ${CMAKE_SOURCE_DIR}/watcher.c
+)
