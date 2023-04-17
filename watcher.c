@@ -5,9 +5,9 @@
 #include <sys/inotify.h>
 
 #define EVENT_SIZE  ( sizeof (struct inotify_event) )
-#define BUF_LEN     ( 1024 ∗ ( EVENT_SIZE + 16 ) )
+#define BUF_LEN     ( 1024 * ( EVENT_SIZE + 16 ) )
 
-int main( int argc, char ∗∗argv ) 
+int main( int argc, char **argv ) 
 {
   int length, i = 0;
   int fd;
@@ -28,34 +28,34 @@ int main( int argc, char ∗∗argv )
   }  
 
   while ( i < length ) {
-    struct inotify_event ∗event = ( struct inotify_event ∗ ) &buffer[ i ];
-    if ( event‑>len ) {
-      if ( event‑>mask & IN_CREATE ) {
-        if ( event‑>mask & IN_ISDIR ) {
-          printf( "The directory %s was created.\n", event‑>name );       
+    struct inotify_event *event = ( struct inotify_event * ) &buffer[ i ];
+    if ( event->len ) {
+      if ( event->mask & IN_CREATE ) {
+        if ( event->mask & IN_ISDIR ) {
+          printf( "The directory %s was created.\n", event->name );       
         }
         else {
-          printf( "The file %s was created.\n", event‑>name );
+          printf( "The file %s was created.\n", event->name );
         }
       }
-      else if ( event‑>mask & IN_DELETE ) {
-        if ( event‑>mask & IN_ISDIR ) {
-          printf( "The directory %s was deleted.\n", event‑>name );       
+      else if ( event->mask & IN_DELETE ) {
+        if ( event->mask & IN_ISDIR ) {
+          printf( "The directory %s was deleted.\n", event->name );       
         }
         else {
-          printf( "The file %s was deleted.\n", event‑>name );
+          printf( "The file %s was deleted.\n", event->name );
         }
       }
-      else if ( event‑>mask & IN_MODIFY ) {
-        if ( event‑>mask & IN_ISDIR ) {
-          printf( "The directory %s was modified.\n", event‑>name );
+      else if ( event->mask & IN_MODIFY ) {
+        if ( event->mask & IN_ISDIR ) {
+          printf( "The directory %s was modified.\n", event->name );
         }
         else {
-          printf( "The file %s was modified.\n", event‑>name );
+          printf( "The file %s was modified.\n", event->name );
         }
       }
     }
-    i += EVENT_SIZE + event‑>len;
+    i += EVENT_SIZE + event->len;
   }
 
   ( void ) inotify_rm_watch( fd, wd );
