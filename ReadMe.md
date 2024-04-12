@@ -1,11 +1,11 @@
 # ipc study
 
-# How to build
+## How to build
 
 vscode -> CTRL+SHIFT+P -> Cmake::Configure
 vscode -> CTRL+SHIFT+P -> Cmake::Build Targe -> all
 
-# How to run
+## How to run
 
 1. fifo with fd:
 ```bash
