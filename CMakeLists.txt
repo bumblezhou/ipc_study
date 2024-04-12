@@ -61,18 +61,6 @@ macro(add_custom_exe TARGET_NAME)
     )
 endmacro()
 
-add_custom_exe(simple_pipe
-    ${CMAKE_SOURCE_DIR}/simple_pipe.c
-)
-
-add_custom_exe(pipe_with_child_process
-    ${CMAKE_SOURCE_DIR}/pipe_with_child_process.c
-)
-
-add_custom_exe(twoway_pipe
-    ${CMAKE_SOURCE_DIR}/twoway_pipe.c
-)
-
 add_custom_exe(fifo_server
     ${CMAKE_SOURCE_DIR}/fifo_server.c
 )
@@ -87,8 +75,4 @@ add_custom_exe(select_with_fd_server
 
 add_custom_exe(select_with_fd_client
     ${CMAKE_SOURCE_DIR}/select_with_fd_client.c
-)
-
-add_custom_exe(watcher
-    ${CMAKE_SOURCE_DIR}/watcher.c
 )
