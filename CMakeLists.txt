@@ -76,3 +76,11 @@ add_custom_exe(select_with_fd_server
 add_custom_exe(select_with_fd_client
     ${CMAKE_SOURCE_DIR}/select_with_fd_client.c
 )
+
+add_custom_exe(socket_server
+    ${CMAKE_SOURCE_DIR}/socket_server.c
+)
+
+add_custom_exe(socket_client
+    ${CMAKE_SOURCE_DIR}/socket_client.c
+)

@@ -29,4 +29,13 @@ cd build
 ./select_with_fd_client
 ```
 
-3. 
+3. socket:
+```bash
+[1st terminal]
+cd build
+./socket_server
+
+[2nd terminal]
+cd build
+./socket_client
+```
